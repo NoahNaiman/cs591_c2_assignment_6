@@ -10,7 +10,10 @@ def url_split(url):
         protocol = split_url[0]
         if protocol[-1] == ":":
             protocol = protocol[:-1]
+
         domain = split_url[1]
+
+        #Assume everything path domain is part of path, concat with "/"
         path = "/".join(split_url[2:])
 
     return protocol, domain, path
